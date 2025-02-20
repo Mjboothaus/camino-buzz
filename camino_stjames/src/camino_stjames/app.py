@@ -12,7 +12,7 @@ class MarkdownPage:
         self.project_root = Path(__file__).parent
         self.resources_path = self.project_root / "resources" / "md"
         self.file_path = self.resources_path / file_name
-        self.web_view = WebView(style=Pack(flex=1, width=600, height=400))
+        self.web_view = WebView(style=Pack(flex=1, width=290, height=700))
 
     def load_content(self):
         try:
@@ -21,7 +21,7 @@ class MarkdownPage:
             <html>
             <head>
                 <style>
-                    body {{ font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }}
+                    body {{ font-family: Arial, sans-serif; line-height: 1.5; padding: 20px; }}
                     h1, h2, h3 {{ color: #333; }}
                     p {{ margin-bottom: 15px; }}
                 </style>
@@ -75,7 +75,7 @@ class SidebarApp(toga.App):
         main_box.add(self.content_area)
 
         self.main_window = toga.MainWindow(
-            title="Multi-Page Markdown Viewer", size=(800, 600)
+            title="Camino: Who was St James?", size=(800, 600)
         )
         self.main_window.content = main_box
         self.main_window.show()

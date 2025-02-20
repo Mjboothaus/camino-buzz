@@ -21,6 +21,7 @@ test_sources = [
 ]
 
 requires = [
+    "markdown",
 ]
 test_requires = [
     "pytest",
